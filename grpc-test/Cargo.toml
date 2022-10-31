@@ -2,5 +2,4 @@
 [workspace]
 members = [
     "api",
-    "frontend"
 ]
