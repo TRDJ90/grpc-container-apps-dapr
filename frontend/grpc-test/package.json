@@ -6,7 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "buf:generate": "buf generate buf.build/bufbuild/eliza"
   },
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +16,9 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@protobuf-ts/plugin": "^2.8.1",
+    "@protobuf-ts/runtime": "^2.8.1",
+    "@protobuf-ts/grpcweb-transport": "^2.8.1",
     "solid-js": "^1.5.1"
   }
 }
