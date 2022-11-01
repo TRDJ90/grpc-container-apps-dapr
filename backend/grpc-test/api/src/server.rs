@@ -28,12 +28,11 @@ impl Greeter for GreeterService {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let addr = "127.0.0.1:3000".parse()?;
+    let addr = "127.0.0.1:3050".parse()?;
     
     let greeter = GreeterService::default();
     let greeter = GreeterServer::new(greeter);
     let greeter = tonic_web::config()
-        .allow_origins(vec!["127.0.0.1"])
         .enable(greeter);
     
     println!("GreeterServer listening on {}", addr);
